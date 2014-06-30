@@ -1,0 +1,36 @@
+<ion-view title="Alarm">
+
+    <ion-nav-buttons side="left">
+        <a class="button button-clear button-assertive" href="" ng-click="data.showDelete = !data.showDelete;">
+Edit
+</a>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a class="button button-clear button-assertive" href="" ng-click="modal.show()">
+            <i class="icon ion-ios7-plus-empty"></i>
+        </a>
+    </ion-nav-buttons>
+
+
+    <ion-content class="content-stable">
+        <ion-list show-delete="data.showDelete">
+
+            <ion-toggle class="animated" 
+                        ng-repeat="time in times" 
+                        toggle-class="toggle-balanced" 
+                        ng-model="time.checked" 
+                        ng-checked="time.checked" 
+                        ng-class="{'item-stable' : !time.checked, 'item-light': time.checked}">
+
+                <h1>{{time.alarm}}</h1>
+                <p>{{time.id}}</p>
+
+                <!--<ion-delete-button class="ion-minus-circled"
+                   ng-click="onItemDelete(item)">
+</ion-delete-button>-->
+            </ion-toggle>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

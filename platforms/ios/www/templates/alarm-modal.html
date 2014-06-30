@@ -1,0 +1,28 @@
+<div class="modal" >
+    <ion-header-bar class="bar-light">
+        
+        <button class="button button-clear button-assertive" ng-click="modal.hide()">Cancel</button>
+        <h1 class="title">Add Alarm</h1>
+        
+        <button class="button button-clear button-assertive" ng-click="add(time)">Save</button>
+        
+    </ion-header-bar>
+    <ion-content class="content-stable">
+
+           <div class="time-selector">
+                 <label class="item item-input">
+                <input type="time"  ng-model="time.alarm">
+            </label>
+           </div>
+
+        <ion-list>
+            <ion-item class="item-light">Repeat</ion-item>
+            <ion-item class="item-light">Label</ion-item>
+            <ion-item class="item-light">Sound</ion-item>
+
+            <ion-toggle>
+                Snooze
+            </ion-toggle>
+        </ion-list>
+    </ion-content>
+</div>
